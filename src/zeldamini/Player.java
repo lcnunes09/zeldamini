@@ -21,6 +21,8 @@ public class Player extends Rectangle {
     
     public boolean shoot = false;
     
+    public int dir = 1; // Player Direction
+    
     public Player(int x, int y) {
         super(x, y, 32, 32); // Initialize the player with its starting position and dimensions
     }
@@ -31,17 +33,21 @@ public class Player extends Rectangle {
         if (right && World.isFree(x + spd, y)) { 
             x += spd; // Move right if no collision at the new position
             moved = true;
+            dir = 1;
         } else if (left && World.isFree(x - spd, y)) { 
             x -= spd; // Move left if no collision at the new position
             moved = true;
+            dir = -1;
         }
 
         if (up && World.isFree(x, y - spd)) { 
-            y -= spd; // Move up if no collision at the new position
+            y -= spd;
             moved = true;
+            dir = -2; // Up
         } else if (down && World.isFree(x, y + spd)) { 
-            y += spd; // Move down if no collision at the new position
+            y += spd;
             moved = true;
+            dir = 2; // Down
         }
         
         if (moved) {
@@ -56,8 +62,8 @@ public class Player extends Rectangle {
         }
         
         if (shoot) {
-        	shoot = false;
-        	arrows.add(new Arrow(x, y, 1));
+            shoot = false;
+            arrows.add(new Arrow(x, y, dir)); // Use the current movement direction
         }
         
         for (int i = 0; i < arrows.size(); i++) {

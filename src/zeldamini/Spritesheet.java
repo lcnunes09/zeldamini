@@ -13,7 +13,10 @@ public class Spritesheet {
     // Individual sprites extracted from the spritesheet
     public static BufferedImage[] player_front; // Sprite representing the player character facing forward
     public static BufferedImage tileWall; // Sprite representing a wall tile
-    public static BufferedImage arrow;
+    public static BufferedImage arrow_right;
+    public static BufferedImage arrow_left;
+    public static BufferedImage arrow_up;
+    public static BufferedImage arrow_down;
 
     // Constructor to load the spritesheet and initialize sprites
     public Spritesheet() {
@@ -30,10 +33,16 @@ public class Spritesheet {
         player_front[0] = Spritesheet.getSprite(0, 11, 16, 16); // Extract the sprite for the player character (x=0, y=11, width=16, height=16)
         player_front[1] = Spritesheet.getSprite(16, 11, 16, 16); 
         tileWall = Spritesheet.getSprite(279, 220, 16, 16); // Extract the sprite for a wall tile (x=279, y=220, width=16, height=16)
-        arrow = Spritesheet.getSprite(10, 185, 16, 16);
+
+        // Load different arrow directions from the spritesheet
+        arrow_right = Spritesheet.getSprite(10, 185, 16, 16);  // Original arrow image facing right
+        arrow_left = Spritesheet.getSprite(196, 207, 16, 16);   // Pre-flipped left-facing arrow
+        arrow_up = Spritesheet.getSprite(158, 207, 16, 16);     // Upward arrow sprite
+        arrow_down = Spritesheet.getSprite(176, 207, 16, 16);   // Downward arrow sprite
+
     }
 
-    // Method to extract a subimage (sprite) from the spritesheet
+    // Method to extract a sub-image (sprite) from the spritesheet
     // Parameters:
     // - x: The x-coordinate of the top-left corner of the sprite
     // - y: The y-coordinate of the top-left corner of the sprite

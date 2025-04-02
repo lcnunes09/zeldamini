@@ -93,23 +93,29 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        // Update direction flags based on key presses
+        // Update movement direction flags
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             player.right = true;
+            player.dir = 1; // Ensure direction updates when moving right
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             player.left = true;
+            player.dir = -1; // Ensure direction updates when moving left
         }
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
             player.up = true;
+            player.dir = -2; // Ensure direction updates when moving up
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             player.down = true;
+            player.dir = 2; // Ensure direction updates when moving down
         }
-        
+
+        // Handle shooting
         if (e.getKeyCode() == KeyEvent.VK_Z) {
-        	player.shoot = true;
+            player.shoot = true;
         }
     }
+    
 
     @Override
     public void keyReleased(KeyEvent e) {
