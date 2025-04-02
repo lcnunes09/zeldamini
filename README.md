@@ -12,6 +12,12 @@ Mini Zelda is a lightweight 2D game inspired by classic RPGs. Players control a 
 - <strong>Enemy Interaction</strong>: Encounter enemies and engage with game elements like walls and obstacles.
 - <strong>Pixel-Art Design</strong>: Enjoy nostalgic visuals through handcrafted sprites and pixel-art aesthetics.
 
+## Gameplay Video
+
+Check out the gameplay video below to see Mini Zelda in action:
+
+[Watch Mini Zelda Gameplay](https://github.com/lcnunes09/zeldamini/blob/main/src/res/Mini%20Zelda%202025-04-01%2021-05-12.mp4)
+
 ## Running the Game
 To run Mini Zelda on your machine:
 1. Clone the Repository
