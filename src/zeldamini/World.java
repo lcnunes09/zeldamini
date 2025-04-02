@@ -29,6 +29,13 @@ public class World {
         for (int yy = 0; yy < 15; yy++) {
             bloco.add(new Block(640 - 32, yy * 32));
         }
+        
+        
+        bloco.add(new Block(200, 300));
+        bloco.add(new Block(400, 400));
+        bloco.add(new Block(100, 350));
+        bloco.add(new Block(200, 40));
+        bloco.add(new Block(500, 100));
     }
 
     // Checks if a given position (x, y) is free (not occupied by any block)

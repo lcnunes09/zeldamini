@@ -12,6 +12,7 @@ public class Spritesheet {
 
     // Individual sprites extracted from the spritesheet
     public static BufferedImage[] player_front; // Sprite representing the player character facing forward
+    public static BufferedImage[] enemy_front;
     public static BufferedImage tileWall; // Sprite representing a wall tile
     public static BufferedImage arrow_right;
     public static BufferedImage arrow_left;
@@ -32,6 +33,12 @@ public class Spritesheet {
         player_front = new BufferedImage[2]; // Create array to get the player position when moving
         player_front[0] = Spritesheet.getSprite(0, 11, 16, 16); // Extract the sprite for the player character (x=0, y=11, width=16, height=16)
         player_front[1] = Spritesheet.getSprite(16, 11, 16, 16); 
+        
+        enemy_front = new BufferedImage[2];
+        enemy_front[0] = Spritesheet.getSprite(316, 159, 16, 16);
+        enemy_front[1] = Spritesheet.getSprite(316+16, 159, 16, 16);
+        
+        
         tileWall = Spritesheet.getSprite(279, 220, 16, 16); // Extract the sprite for a wall tile (x=279, y=220, width=16, height=16)
 
         // Load different arrow directions from the spritesheet
@@ -41,7 +48,7 @@ public class Spritesheet {
         arrow_down = Spritesheet.getSprite(176, 207, 16, 16);   // Downward arrow sprite
 
     }
-
+    
     // Method to extract a sub-image (sprite) from the spritesheet
     // Parameters:
     // - x: The x-coordinate of the top-left corner of the sprite
