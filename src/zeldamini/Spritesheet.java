@@ -13,6 +13,7 @@ public class Spritesheet {
     // Individual sprites extracted from the spritesheet
     public static BufferedImage[] player_front; // Sprite representing the player character facing forward
     public static BufferedImage tileWall; // Sprite representing a wall tile
+    public static BufferedImage arrow;
 
     // Constructor to load the spritesheet and initialize sprites
     public Spritesheet() {
@@ -25,10 +26,11 @@ public class Spritesheet {
         }
 
         // Extract specific sprites from the spritesheet based on their location and size
-        player_front = new BufferedImage[3]; // Create array to get the player position when moving
+        player_front = new BufferedImage[2]; // Create array to get the player position when moving
         player_front[0] = Spritesheet.getSprite(0, 11, 16, 16); // Extract the sprite for the player character (x=0, y=11, width=16, height=16)
         player_front[1] = Spritesheet.getSprite(16, 11, 16, 16); 
         tileWall = Spritesheet.getSprite(279, 220, 16, 16); // Extract the sprite for a wall tile (x=279, y=220, width=16, height=16)
+        arrow = Spritesheet.getSprite(10, 185, 16, 16);
     }
 
     // Method to extract a subimage (sprite) from the spritesheet
