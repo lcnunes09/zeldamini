@@ -29,9 +29,11 @@ public class Player extends Rectangle {
         }
     }
 
-    // Draws the player as a blue rectangle on the screen
     public void render(Graphics g) {
-        g.setColor(Color.blue); 
-        g.fillRect(x, y, width, height); 
+    	// Draws the player as a blue rectangle on the screen
+        // g.setColor(Color.blue); 
+        // g.fillRect(x, y, width, height); 
+    	
+    	g.drawImage(Spritesheet.player_front, x, y, 32, 32, null);
     }
 }

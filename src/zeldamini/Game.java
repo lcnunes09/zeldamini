@@ -21,6 +21,8 @@ public class Game extends Canvas implements Runnable, KeyListener {
     public Game() {
         this.addKeyListener(this);
         this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        
+        new Spritesheet();
 
         player = new Player(32, 32); // Create the player at the initial position (top-left corner)
         world = new World(); // Initializes and renders the entire game world, including elements like enemies, blocks, and other entities.
@@ -42,7 +44,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         Graphics g = bs.getDrawGraphics();
 
-        g.setColor(Color.black); 
+        g.setColor(new Color(0,135,13)); 
         g.fillRect(0, 0, WIDTH, HEIGHT); // Clear the screen by filling it with a black rectangle
 
         player.render(g); // Render the player object'
