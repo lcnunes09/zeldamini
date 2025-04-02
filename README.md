@@ -18,6 +18,26 @@ Check out the gameplay video below to see Mini Zelda in action:
 
 [Watch Mini Zelda Gameplay](https://github.com/lcnunes09/zeldamini/blob/main/src/res/Mini%20Zelda%202025-04-01%2021-05-12.mp4)
 
+## Planned Features
+
+Here are the next features I plan to implement as I continue developing **Mini Zelda**:
+
+- **Player Mechanics**:
+  - Add a **life system** for the player, allowing them to take damage from enemies.
+  - Enable the player to hurt enemies through attacks.
+  - Trigger a **Game Over screen** when the player's life reaches zero.
+
+- **Enemy Mechanics**:
+  - Introduce a **life system** for enemies, making them defeatable.
+  - Allow enemies to randomly **block player attacks**.
+  - Trigger a **Player Victory screen** when all enemies are defeated.
+
+- **Dynamic Gameplay**:
+  - Spawn **new enemies randomly** after a certain period to increase difficulty.
+  - Generate **additional blocks** randomly to add environmental challenges.
+
+These features aim to bring more depth and excitement to Mini Zelda, paving the way for a dynamic and engaging gameplay experience. Feedback or suggestions for these features are welcome—feel free to contribute!
+
 ## Running the Game
 To run Mini Zelda on your machine:
 1. Clone the Repository
