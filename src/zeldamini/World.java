@@ -27,7 +27,7 @@ public class World {
 
         // Create the right boundary of the game world (15 blocks in a column)
         for (int yy = 0; yy < 15; yy++) {
-            bloco.add(new Block(480 - 32, yy * 32));
+            bloco.add(new Block(640 - 32, yy * 32));
         }
     }
 

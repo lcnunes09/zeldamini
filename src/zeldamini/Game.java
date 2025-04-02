@@ -12,7 +12,8 @@ import javax.swing.JFrame;
 
 public class Game extends Canvas implements Runnable, KeyListener {
     // Define the size of the game window (480x480 pixels)
-    public static int WIDTH = 480, HEIGHT = 480;
+    public static int WIDTH = 640, HEIGHT = 480;
+    public static int SCALE = 3; // Scale to create a bigger screen
 
     public Player player;
     public World world;
@@ -20,7 +21,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
     // Initialize the game with key listeners and dimensions
     public Game() {
         this.addKeyListener(this);
-        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setPreferredSize(new Dimension(WIDTH*SCALE, HEIGHT*SCALE));
         
         new Spritesheet();
 
