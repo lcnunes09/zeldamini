@@ -34,6 +34,6 @@ public class Player extends Rectangle {
         // g.setColor(Color.blue); 
         // g.fillRect(x, y, width, height); 
     	
-    	g.drawImage(Spritesheet.player_front, x, y, 32, 32, null);
+    	g.drawImage(Spritesheet.player_front[0], x, y, 32, 32, null);
     }
 }

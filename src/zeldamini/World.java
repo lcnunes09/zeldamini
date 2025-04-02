@@ -11,12 +11,12 @@ public class World {
 
     public World() {
         // Create the top boundary of the game world (15 blocks in a row)
-        for (int xx = 0; xx < 15; xx++) {
+        for (int xx = 0; xx < 20; xx++) {
             bloco.add(new Block(xx * 32, 0));
         }
 
         // Create the bottom boundary of the game world (15 blocks in a row)
-        for (int xx = 0; xx < 15; xx++) {
+        for (int xx = 0; xx < 20; xx++) {
             bloco.add(new Block(xx * 32, 480 - 32));
         }
 

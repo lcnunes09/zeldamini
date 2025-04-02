@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 public class Game extends Canvas implements Runnable, KeyListener {
     // Define the size of the game window (480x480 pixels)
     public static int WIDTH = 640, HEIGHT = 480;
-    public static int SCALE = 3; // Scale to create a bigger screen
+    public static int SCALE = 1; // Scale to create a bigger screen
 
     public Player player;
     public World world;
